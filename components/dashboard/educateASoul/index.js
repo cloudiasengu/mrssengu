@@ -39,7 +39,7 @@ export default function index() {
     <div>
       <Head>
       <link className="border rounded-full" rel="shortcut icon" href="/students2.avif"></link>
-        <title>Gracelife - Students DB</title>
+        <title>Rusape</title>
       </Head>
       <div className="py-12 bg-white">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -61,7 +61,7 @@ export default function index() {
                   }`}
                   onClick={handleDistrictChange}
                 >
-                  HARARE
+                  Rusape Urban Ward 1
                 </Link>
 
                 <Link
@@ -73,7 +73,7 @@ export default function index() {
                   }`}
                   onClick={handleDistrictChange}
                 >
-                  MAZOWE
+                  Rusape Urban Ward 2
                 </Link>
 
                 <Link
@@ -85,7 +85,7 @@ export default function index() {
                   }`}
                   onClick={handleDistrictChange}
                 >
-                  RUSAPE
+                  Rusape Urban Ward 3
                 </Link>
 
                 <Link
@@ -97,7 +97,7 @@ export default function index() {
                   }`}
                   onClick={handleDistrictChange}
                 >
-                  EPWORTH
+                  Rusape Rural Ward 1
                 </Link>
               </nav>
             </div>

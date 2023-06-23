@@ -12,17 +12,25 @@ export default function SchoolsTable({ schools, district }) {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const [name, setName] = useState("");
-  const [surname, setSurname] = useState("");
-  const [grade, setGrade] = useState("");
-  const [school, setSchool] = useState("");
-  const [contact, setContact] = useState("");
-  const [address, setAddress] = useState("");
+ // Initialize state variables
+const [name, setName] = useState("");
+const [gender, setGender] = useState("");
+const [dateOfBirth, setDateOfBirth] = useState("");
+const [placeOfBirth, setPlaceOfBirth] = useState("");
+const [nationality, setNationality] = useState("");
+const [maritalStatus, setMaritalStatus] = useState("");
+const [residentialAddress, setResidentialAddress] = useState("");
+const [contact, setContact] = useState("");
+const [otherInformation, setOtherInformation] = useState("");
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // handle submission logic here
-  };
+// Form submission handler
+const handleSubmit = (event) => {
+  event.preventDefault();
+  // Handle form submission logic here
+};
+
+
+  
 
   const options = schools.map((school) => ({
     name: school.name,
@@ -74,107 +82,139 @@ export default function SchoolsTable({ schools, district }) {
                     </svg>
                   </div>
                   <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                    <h3 className="text-4xl leading-6 font-medium text-gray-900">
-                      Add New Student
-                    </h3>
-                    <div className="mt-2">
-                      <form
-                        onSubmit={handleSubmit}
-                        className="max-w-lg mx-auto"
-                      >
-                        <div className="my-4">
-                          <label
-                            htmlFor="name"
-                            className="block font-medium mb-1"
-                          >
-                            Name:
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={name}
-                            onChange={(event) => setName(event.target.value)}
-                          />
-                        </div>
-                        <div className="my-4">
-                          <label
-                            htmlFor="surname"
-                            className="block font-medium mb-1"
-                          >
-                            Surname:
-                          </label>
-                          <input
-                            type="text"
-                            id="surname"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={surname}
-                            onChange={(event) => setSurname(event.target.value)}
-                          />
-                        </div>
-                        <div className="my-4">
-                          <label
-                            htmlFor="grade"
-                            className="block font-medium mb-1"
-                          >
-                            Grade/Form:
-                          </label>
-                          <input
-                            type="text"
-                            id="grade"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={grade}
-                            onChange={(event) => setGrade(event.target.value)}
-                          />
-                        </div>
-                        <div className="my-4">
-                          <label
-                            htmlFor="school"
-                            className="block font-medium mb-1"
-                          >
-                            Name of School:
-                          </label>
-                          <input
-                            type="text"
-                            id="school"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={school}
-                            onChange={(event) => setSchool(event.target.value)}
-                          />
-                        </div>
-                        <div className="my-4">
-                          <label
-                            htmlFor="contact"
-                            className="block font-medium mb-1"
-                          >
-                            Contact:
-                          </label>
-                          <input
-                            type="text"
-                            id="contact"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={contact}
-                            onChange={(event) => setContact(event.target.value)}
-                          />
-                        </div>
-                        <div className="my-4">
-                          <label
-                            htmlFor="address"
-                            className="block font-medium mb-1"
-                          >
-                            House Address:
-                          </label>
-                          <textarea
-                            id="address"
-                            rows="3"
-                            className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
-                            value={address}
-                            onChange={(event) => setAddress(event.target.value)}
-                          ></textarea>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
+  <h3 className="text-4xl leading-6 font-medium text-gray-900">
+    Add New Identity
+  </h3>
+  <div className="mt-2">
+    <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
+      <div className="my-4">
+        <label htmlFor="name" className="block font-medium mb-1">
+          Full Name:
+        </label>
+        <input
+          type="text"
+          id="name"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+        />
+      </div>
+      <div className="my-4">
+        <label htmlFor="gender" className="block font-medium mb-1">
+          Gender:
+        </label>
+        <select
+          id="gender"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={gender}
+          onChange={(event) => setGender(event.target.value)}
+        >
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div className="my-4">
+        <label htmlFor="dateOfBirth" className="block font-medium mb-1">
+          Date of Birth:
+        </label>
+        <input
+          type="date"
+          id="dateOfBirth"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={dateOfBirth}
+          onChange={(event) => setDateOfBirth(event.target.value)}
+        />
+      </div>
+      <div className="my-4">
+        <label htmlFor="placeOfBirth" className="block font-medium mb-1">
+          Place of Birth:
+        </label>
+        <input
+          type="text"
+          id="placeOfBirth"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={placeOfBirth}
+          onChange={(event) => setPlaceOfBirth(event.target.value)}
+        />
+      </div>
+      <div className="my-4">
+        <label htmlFor="nationality" className="block font-medium mb-1">
+          Nationality:
+        </label>
+        <input
+          type="text"
+          id="nationality"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={nationality}
+          onChange={(event) => setNationality(event.target.value)}
+        />
+      </div>
+      <div className="my-4">
+        <label htmlFor="maritalStatus" className="block font-medium mb-1">
+          Marital Status:
+        </label>
+        <select
+          id="maritalStatus"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={maritalStatus}
+          onChange={(event) => setMaritalStatus(event.target.value)}
+        >
+          <option value="">Select Marital Status</option>
+          <option value="single">Single</option>
+          <option value="married">Married</option>
+          <option value="divorced">Divorced</option>
+          <option value="widowed">Widowed</option>
+        </select>
+      </div>
+      <div className="my-4">
+        <label htmlFor="residentialAddress" className="block font-medium mb-1">
+          Residential Address:
+        </label>
+        <textarea
+          id="residentialAddress"
+          rows="3"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={residentialAddress}
+          onChange={(event) => setResidentialAddress(event.target.value)}
+        ></textarea>
+      </div>
+      <div className="my-4">
+        <label htmlFor="contact" className="block font-medium mb-1">
+          Contact:
+        </label>
+        <input
+          type="text"
+          id="contact"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={contact}
+          onChange={(event) => setContact(event.target.value)}
+        />
+      </div>
+      <div className="my-4">
+        <label htmlFor="otherInformation" className="block font-medium mb-1">
+          Other Information:
+        </label>
+        <textarea
+          id="otherInformation"
+          rows="3"
+          className="w-full rounded-lg border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
+          value={otherInformation}
+          onChange={(event) => setOtherInformation(event.target.value)}
+        ></textarea>
+      </div>
+      <div className="my-4">
+        <button
+          type="submit"
+          className="py-2 px-4 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
                 </div>
                 <div className="mt-5 sm:mt-4 sm:flex sm:flex-row-reverse">
                   <button
@@ -222,7 +262,7 @@ export default function SchoolsTable({ schools, district }) {
                   d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              New Student
+              New Entry
             </button>
             <input
               type="text"

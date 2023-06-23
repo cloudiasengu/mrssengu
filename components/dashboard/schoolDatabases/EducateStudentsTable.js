@@ -100,10 +100,10 @@ export default function StudentsTable({ schoolName, searchQuery }) {
             <tr className="bg-indigo-500 text-white">
               <th className="px-4 py-2">Name</th>
               <th className="px-4 py-2">Surname</th>
-              <th className="px-4 py-2">Grade/Form</th>
-              <th className="px-4 py-2">Name of School</th>
-              <th className="px-4 py-2">Contact</th>
-              <th className="px-4 py-2">House Address</th>
+              <th className="px-4 py-2">ID Number</th>
+              <th className="px-4 py-2">Gender</th>
+              <th className="px-4 py-2">Date of Birth</th>
+              <th className="px-4 py-2"> Address</th>
               <th className="px-4 py-2">Edit</th>
               <th className="px-4 py-2">Delete</th>
             </tr>
@@ -180,7 +180,7 @@ export default function StudentsTable({ schoolName, searchQuery }) {
       >
         {selectedStudent && (
           <div>
-            <h2>Edit Student</h2>
+            <h2>Edit Identity</h2>
             <form onSubmit={handleEditSubmit}>
               <div className="mb-4">
                 <label
