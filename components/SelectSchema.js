@@ -51,39 +51,7 @@ export default function SelectSchema() {
                   Rusape Registry
                 </button>
               </Link>
-              <Link href="/dashboard/feedasoul">
-                <button
-                  onMouseEnter={() => setHoveredButton("feed")}
-                  onMouseLeave={() => setHoveredButton(null)}
-                  className={`text-white rounded font-bold bg-pink-500 hover:bg-pink-600 w-full md:w-64 py-4 px-8 transition-all ${
-                    hoveredButton === "feed" ? "scale-110" : ""
-                  }`}
-                >
-                  Feed A Soul
-                </button>
-              </Link>
-              <Link href="/dashboard/careforasoul">
-                <button
-                  onMouseEnter={() => setHoveredButton("care")}
-                  onMouseLeave={() => setHoveredButton(null)}
-                  className={`text-white rounded font-bold bg-green-500 hover:bg-green-600 w-full md:w-64 py-4 px-8 transition-all ${
-                    hoveredButton === "care" ? "scale-110" : ""
-                  }`}
-                >
-                  Care for A Soul
-                </button>
-              </Link>
-              <Link href="/dashboard/blogmanager">
-                <button
-                  onMouseEnter={() => setHoveredButton("blog")}
-                  onMouseLeave={() => setHoveredButton(null)}
-                  className={`text-white rounded font-bold bg-yellow-500 hover:bg-yellow-600 w-full md:w-64 py-4 px-8 transition-all ${
-                    hoveredButton === "blog" ? "scale-110" : ""
-                  }`}
-                >
-                   Blog Manager
-                </button>
-              </Link>
+              
             </div>
           </div>
         </div>

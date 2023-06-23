@@ -44,12 +44,7 @@ export default function index() {
       <div className="py-12 bg-white">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="flex items-center justify-between">
-            <Image
-              className="cursor-pointer"
-              src="/gracelife-logo.png"
-              width={200}
-              height={200}
-            />
+           
             <div className="sm:border-gray-200 sm:border-b">
               <nav className="flex flex-wrap -mb-px sm:space-x-10">
                 <Link
