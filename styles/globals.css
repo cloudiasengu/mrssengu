@@ -16,12 +16,17 @@
   }
 }
 
+@media (max-width: 640px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
+  background: #ffffff
     rgb(var(--background-start-rgb));
 }
